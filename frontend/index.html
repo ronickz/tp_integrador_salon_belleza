@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Salon de belleza</title>
+</head>
+<body>
+    <header class="navbar-principal">
+        <div class="marca-navbar">
+            <span class="logo-navbar" aria-hidden="true">S</span>
+            <div class="info-navbar">
+                <p class="nombre-app">salon_nombre</p>
+                <p class="alumnos-navbar">Carola Castanhera y Ezequiel Perez</p>
+            </div>
+        </div>
+
+        <nav class="navegacion-navbar" aria-label="Navegacion principal">
+            <a href="./index.html">Inicio</a>
+            <a href="#">Tema</a>
+        </nav>
+    </header>
+
+    <main class="pagina-bienvenida">
+        <section class="card-bienvenida" aria-labelledby="titulo-bienvenida">
+            <p class="texto-destacado">Salon de belleza</p>
+            <h1 id="titulo-bienvenida">Bienvenida</h1>
+            <p class="texto-suave">Ingresa tu nombre para continuar.</p>
+
+            <form id="formulario-nombre">
+                <label for="nombre">Nombre</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    autocomplete="name"
+                    required
+                >
+                <button type="submit">Continuar</button>
+                <p class="mensaje-error"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="./js/pages/bienvenida.js"></script>
+</body>
+</html>
