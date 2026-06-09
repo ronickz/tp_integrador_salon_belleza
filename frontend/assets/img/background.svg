@@ -1,0 +1,42 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#FFF8F6"/>
+  <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1450 420) rotate(140) scale(760 520)">
+    <stop stop-color="#F7C7CF" stop-opacity="0.55"/>
+    <stop offset="0.55" stop-color="#F9E4E3" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#FFF8F6" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 260) rotate(25) scale(520 360)">
+    <stop stop-color="#F4D7CA" stop-opacity="0.45"/>
+    <stop offset="1" stop-color="#FFF8F6" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="g3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(860 900) rotate(0) scale(700 280)">
+    <stop stop-color="#FBE1E8" stop-opacity="0.55"/>
+    <stop offset="1" stop-color="#FFF8F6" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1920" height="1080" fill="url(#g1)"/>
+  <rect width="1920" height="1080" fill="url(#g2)"/>
+  <rect width="1920" height="1080" fill="url(#g3)"/>
+
+  <path d="M0 780 C220 650 440 770 650 660 C890 535 1080 610 1280 490 C1490 365 1690 430 1920 315 V1080 H0 V780Z" fill="#FBEDEA" opacity="0.55"/>
+  <path d="M0 850 C260 760 420 890 700 760 C940 650 1130 760 1410 630 C1600 545 1760 570 1920 500 V1080 H0 V850Z" fill="#FFFDFC" opacity="0.75"/>
+
+  <g stroke="#D79A83" stroke-width="3" stroke-linecap="round" opacity="0.34">
+    <path d="M88 160 C130 98 188 72 260 55"/>
+    <path d="M158 110 C132 104 110 88 96 65"/>
+    <path d="M183 92 C182 63 194 38 220 20"/>
+    <path d="M215 79 C240 56 270 45 305 48"/>
+    <path d="M122 137 C88 138 60 124 42 98"/>
+  </g>
+
+  <g stroke="#D79A83" stroke-width="3" stroke-linecap="round" opacity="0.28" transform="translate(1630 70) rotate(8)">
+    <path d="M0 120 C42 58 100 32 172 15"/>
+    <path d="M70 70 C44 64 22 48 8 25"/>
+    <path d="M95 52 C94 23 106 -2 132 -20"/>
+    <path d="M127 39 C152 16 182 5 217 8"/>
+    <path d="M34 97 C0 98 -28 84 -46 58"/>
+  </g>
+
+  <circle cx="1465" cy="265" r="180" fill="#F9D7D9" opacity="0.18"/>
+  <circle cx="1320" cy="805" r="120" fill="#E6B18E" opacity="0.10"/>
+  <circle cx="390" cy="735" r="150" fill="#EFC1C8" opacity="0.16"/>
+</svg>

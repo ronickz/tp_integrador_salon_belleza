@@ -1,0 +1,1 @@
+import { renderNavbarCompra } from "../components/navbar.js";
