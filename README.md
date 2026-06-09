@@ -2,13 +2,13 @@
 
 ## Integrantes
 
-* Carolina Castanehira
+* Carola Castanehira
 * Ezequiel Agustin Perez
 
 
 ## Tematica Salon de Belleza
 
->Nombre del salon: **confirmar**
+>Nombre del salon: Estudio CE
 >Tipos : Cuidado capilar y Manicuria y uñas  (**confirmar**)
 
 `registros de ejemplo`

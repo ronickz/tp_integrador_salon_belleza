@@ -1,23 +1,23 @@
 :root {
   /* Base */
-  --color-bg: #fff8f6;
-  --color-surface: #ffffff;
-  --color-surface-soft: #fff1f2;
+  --color-bg: #63443c;
+  --color-surface: #6b4839b5;
+  --color-surface-soft: #673d3d;
 
   /* Marca */
-  --color-primary: #d85c7a;
-  --color-primary-dark: #9b214d;
-  --color-primary-light: #f4a8b8;
+  --color-primary: #42251d;
+  --color-primary-dark: #6b4539;
+  --color-primary-light: #a07e84;
 
   /* Secundarios */
-  --color-gold: #d79a83;
+  --color-gold: #ac7c6a;
   --color-gold-soft: #f4d7ca;
-  --color-blush: #fbe1e8;
+  --color-blush: #9f8478b5;
 
   /* Texto */
-  --color-text: #2b2024;
-  --color-text-soft: #6f5b61;
-  --color-muted: #9b8a8e;
+  --color-text: #ffffff;
+  --color-text-soft: #1e171a;
+  --color-muted: #9a93a1;
 
   /* Bordes y sombras */
   --color-border: #ead6da;
@@ -34,7 +34,9 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--color-bg);
-  background-image: url("../assets/img/background.svg");
+  background:
+    linear-gradient(rgba(99, 68, 60, 0.8), rgba(99, 68, 60, 0.5)),
+    url("../assets/img/background.png");
   background-size: cover;
   background-position: center;
   color: var(--color-text);
@@ -70,7 +72,7 @@ body {
   align-items: center;
   border-radius: 8px;
   background: var(--color-primary);
-  color: var(--color-surface);
+  color: var(--color-gold);
   font-size: 1.35rem;
   font-weight: 700;
 }
@@ -87,7 +89,7 @@ body {
 }
 
 .nombre-app {
-  color: var(--color-text);
+  color: var(--color-primary);
   font-size: 1.15rem;
   font-weight: 700;
 }
@@ -110,16 +112,15 @@ body {
   padding: 10px 14px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
-  color: var(--color-primary-dark);
-  background: var(--color-surface-soft);
+  color: var(--color-gold);
+  background: var(--color-primary);
   font-weight: 700;
   text-decoration: none;
 }
 
 .navegacion-navbar a:hover {
   border-color: var(--color-primary);
-  background: var(--color-blush);
-  color: var(--color-primary-dark);
+  box-shadow: 0 0 0 3px var(--color-blush);
 }
 
 .pagina-bienvenida {
@@ -141,7 +142,7 @@ body {
 
 .texto-destacado {
   margin: 0 0 10px;
-  color: var(--color-primary-dark);
+  color: var(--color-text-soft);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0;
@@ -157,7 +158,8 @@ body {
 
 .texto-suave {
   margin: 12px 0 24px;
-  color: var(--color-text-soft);
+  /* color: var(--color-text-soft); */
+  color: black;
   line-height: 1.5;
 }
 
@@ -185,7 +187,7 @@ body {
 }
 
 #formulario-nombre input::placeholder {
-  color: var(--color-muted);
+  color: var(--color-gold);
 }
 
 #formulario-nombre input:focus {
@@ -199,10 +201,11 @@ body {
   border: 0;
   border-radius: 8px;
   background: var(--color-primary);
-  color: var(--color-surface);
+  color: var(--color-gold);
   cursor: pointer;
   font: inherit;
   font-weight: 700;
+  box-shadow: 0 0 0 2px var(--color-blush);
 }
 
 .mensaje-error {
