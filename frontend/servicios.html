@@ -10,16 +10,345 @@
 </head>
 <body>
     <header class="navbar-principal">
-        <nav class="navegacion-navbar">
-            <a href="index.html">Inicio</a>
-            <a href="salones.html">Salones</a>
+        <div class="marca-navbar">
+            <span class="logo-navbar" aria-hidden="true">CE</span>
+            <div class="info-navbar">
+                <p class="nombre-app">Estudio CE</p>
+                <p class="alumnos-navbar">Carola Castanhera y Ezequiel Perez</p>
+            </div>
+        </div>
+
+        <nav class="navegacion-navbar" aria-label="Navegacion principal">
+            <a href="./index.html">Home</a>
             <a href="servicios.html">Servicios</a>
-            <a href="quienes-somos.html">Quiénes Somos</a>
+            <a href="salones.html">Salones</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="quienes-somos.html">Quienes somos</a>
+            
         </nav>
     </header>
 
     <main>
-        <h1>Servicios</h1>
+        
+        <section id="servicios">
+            <h1 id="titulos-secciones">Servicios</h1>
+            <p id="texto-titulo">Listado de precios vigentes a partir del 10/06/2026</p>
+
+        <div id="opciones-servicios">
+        <h2>Cortes y peinados</h2>
+
+        <details id="desplegables">
+            <summary id="categorias">Cortes</summary>
+
+            <ul>
+                <li>
+                    <span>Corte</span>
+                    <span>$ 45.000</span>
+                </li>
+                <li>
+                    <span>Flequillo</span>
+                    <span>$ 25.000</span>
+                </li>
+                <li>
+                    <span>Recorte barba</span>
+                    <span>$ 30.000</span>
+                </li>
+                <li>
+                    <span>Afeitado completo</span>
+                    <span>$ 45.000</span>
+                </li>
+                <li>
+                    <span>Corte Premium</span>
+                    <span>$ 60.000</span>
+                </li>
+            </ul>
+        </details>
+
+        <details id="desplegables">
+            <summary id="categorias">Peinados</summary>
+
+            <ul>
+                <li>
+                    <span>Secado</span>
+                    <span>$ 20.000</span>
+                </li>
+                <li>
+                    <span>Brushing</span>
+                    <span>$ 30.000</span>
+                </li>
+                <li>
+                    <span>Brushing c/ extensiones</span>
+                    <span>$ 40.000</span>
+                </li>
+                <li>
+                    <span>Ondas (todo el pelo)</span>
+                    <span>$ 25.000</span>
+                </li>
+                <li>
+                    <span>Ondas (mitad del pelo)</span>
+                    <span>$ 22.000</span>
+                </li>
+                <li>
+                    <span>Peinado especial</span>
+                    <span>$ 80.000</span>
+                </li>
+            </ul>
+        </details>
+
+        <details id="desplegables">
+            <summary id="categorias">Pileta</summary>
+
+            <ul>
+                <li>
+                    <span>Lavado corte peinado (neutro)</span>
+                    <span>$ 26.000</span>
+                </li>
+                <li>
+                    <span>Lavado de color</span>
+                    <span>$ 23.000</span>
+                </li>
+                <li>
+                    <span>Lavado Loreal</span>
+                    <span>$ 25.000</span>
+                </li>
+                <li>
+                    <span>Lavado Kerastasse</span>
+                    <span>$ 30.000</span>
+                </li>
+                <li>
+                    <span>Lavado Vegano</span>
+                    <span>$ 28.000</span>
+                </li>
+            </ul>
+
+        </details>
+        </div>
+
+        <div id="opciones-servicios">
+            <h2>Color</h2>
+
+            <details id="desplegables">
+                <summary id="categorias">Coloración</summary>
+                <ul>
+                    <li>
+                        <span>Touch (corto/ medio)</span>
+                        <span>$ 80.000</span>
+                    </li>
+                    <li>
+                        <span>Touch (largo)</span>
+                        <span>$ 100.000</span>
+                    </li>
+                    <li>
+                        <span>Henna (todos los largos)</span>
+                        <span>$ 110.000</span>
+                    </li>
+                    <li>
+                        <span>Diacolor (corto/medio)</span>
+                        <span>$ 80.000</span>
+                    </li>
+                    <li>
+                        <span>Diacolor (largo)</span>
+                        <span>$ 100.000</span>
+                    </li>
+                </ul>
+        </details>
+
+        <details id="desplegables">
+                <summary id="categorias">Reflejos - Gorro - Decoloración</summary>
+                <ul>
+                    <li>
+                        <span>Reflejos/ Iluminación (corto/medio)</span>
+                        <span>$ 130.000</span>
+                    </li>
+                    <li>
+                        <span>Reflejos/ Iluminación (largo)</span>
+                        <span>$ 150.000</span>
+                    </li>
+                    <li>
+                        <span>Mechas c/ gorro (corto/medio)</span>
+                        <span>$ 140.000</span>
+                    </li>
+                    <li>
+                        <span>Mechas c/ gorro (largo)</span>
+                        <span>$ 160.000</span>
+                    </li>
+                    <li>
+                        <span>Balayage</span>
+                        <span>$ 180.000</span>
+                    </li>
+                    <li>
+                        <span>Decoloración (corto/medio)</span>
+                        <span>$ 125.000</span>
+                    </li>
+                    <li>
+                        <span>Decoloración (largo)</span>
+                        <span>$ 140.000</span>
+                    </li>
+
+                </ul>
+        </details>
+        </div>
+
+        <div id="opciones-servicios">
+            <h2>Manos y pies</h2>
+
+            <details id="desplegables">
+                <summary id="categorias">Manicura</summary>
+                <ul>
+                    <li>
+                        <span>Manos</span>
+                        <span>$ 40.000</span>
+                    </li>
+                    <li>
+                        <span>Cambio de esmalte</span>
+                        <span>$ 15.000</span>
+                    </li>
+                    <li>
+                        <span>Retiro de esmalte anterior</span>
+                        <span>$ 15.000</span>
+                    </li>
+                    <li>
+                        <span>Service</span>
+                        <span>$ 55.000</span>
+                    </li>
+                    <li>
+                        <span>Kapping</span>
+                        <span>$ 80.000</span>
+                    </li>
+                </ul>
+            </details>
+            
+            <details id="desplegables">
+                <summary id="categorias">Pedicura</summary>
+                <ul>
+                    <li>
+                        <span>Belleza de pies</span>
+                        <span>$ 50.000</span>
+                    </li>
+                    <li>
+                        <span>Cambio de esmalde tradicional</span>
+                        <span>$ 20.000</span>
+                    </li>
+                    <li>
+                        <span>Retiro de esmalte anterior</span>
+                        <span>$ 18.000</span>
+                    </li>
+                    <li>
+                        <span>Service</span>
+                        <span>$ 65.000</span>
+                    </li>
+                </ul>
+            </details>
+        </div>
+
+        <div id="opciones-servicios">
+            <h2>Maquillajes</h2>
+
+            <details id="desplegables">
+                <summary id="categorias">Maquillaje y cosmetología</summary>
+                <ul>
+                    <li>
+                        <span>Maquillaje en el salón</span>
+                        <span>$ 130.000</span>
+                    </li>
+                    <li>
+                        <span>Maquillaje a domicilio</span>
+                        <span>$ 200.000</span>
+                    </li>
+                    <li>
+                        <span>Modelado de cejas</span>
+                        <span>$ 55.000</span>
+                    </li>
+                    <li>
+                        <span>Aplicación de pestañas</span>
+                        <span>$ 33.000</span>
+                    </li>
+                    <li>
+                        <span>Nutrición</span>
+                        <span>$ 35.000</span>
+                    </li>
+                </ul>
+            </details>
+        </div>
+
+        <div id="opciones-servicios">
+            <h2>Depilación tradicional</h2>
+            <details id="desplegables">
+                <summary id="categorias">Torso</summary>
+                <ul>
+                    <li>
+                        <span>Espalda</span>
+                        <span>$ 20.000</span>
+                    </li>
+                    <li>
+                        <span>Abdomen</span>
+                        <span>$ 20.000</span>
+                    </li>
+                    <li>
+                        <span>Hombros</span>
+                        <span>$ 15.000</span>
+                    </li>
+                    <li>
+                        <span>Cintura</span>
+                        <span>$ 20.000</span>
+                    </li>
+                </ul>
+            </details>
+
+            <details id="desplegables">
+                <summary id="categorias">Rostro</summary>
+                <ul>
+                    <li>
+                        <span>Cejas</span>
+                        <span>$ 15.000</span>
+                    </li>
+                    <li>
+                        <span>Bozo</span>
+                        <span>$ 16.000</span>
+                    </li>
+                    <li>
+                        <span>Patillas</span>
+                        <span>$ 13.000</span>
+                    </li>
+                    <li>
+                        <span>Entrecejo</span>
+                        <span>$ 15.000</span>
+                    </li>
+                </ul>
+            </details>
+
+            <details id="desplegables">
+                <summary id="categorias">Piernas - Axilas - Brazos</summary>
+                <ul>
+                    <li>
+                        <span>Axilas</span>
+                        <span> $ 30.000</span>
+                    </li>
+                    <li>
+                        <span>Brazo completo</span>
+                        <span>$ 20.000</span>
+                    </li>
+                    <li>
+                        <span>Medio brazo</span>
+                        <span>$ 15.000</span>
+                    </li>
+                    <li>
+                        <span>Pierna completa</span>
+                        <span>$ 35.000</span>
+                    </li>
+                    <li>
+                        <span>Media pierna</span>
+                        <span>$ 20.000</span>
+                    </li>
+                    <li>
+                        <span>Pies</span>
+                        <span>$ 18.000</span>
+                    </li>
+                </ul>
+            </details>
+
+        </div>
+    </section>
     </main>
 
 

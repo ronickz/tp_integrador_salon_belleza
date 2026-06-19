@@ -11,17 +11,174 @@
     
 </head>
 <body>
-    <header id="contenedor-navbar">
-        <nav class="navegacion-navbar">
-            <a href="index.html">Inicio</a>
-            <a href="salones.html">Salones</a>
+    <header class="navbar-principal">
+        <div class="marca-navbar">
+            <span class="logo-navbar" aria-hidden="true">CE</span>
+            <div class="info-navbar">
+                <p class="nombre-app">Estudio CE</p>
+                <p class="alumnos-navbar">Carola Castanhera y Ezequiel Perez</p>
+            </div>
+        </div>
+
+        <nav class="navegacion-navbar" aria-label="Navegacion principal">
+            <a href="./index.html">Home</a>
             <a href="servicios.html">Servicios</a>
-            <a href="quienes-somos.html">Quiénes Somos</a>
+            <a href="salones.html">Salones</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="quienes-somos.html">Quienes somos</a>
+            
         </nav>
     </header>
 
     <main>
-        <h1>Salones</h1>
+        <h1 id="titulos-secciones">Salones</h1>
+
+<!-- ----------------------------Formulario encontrar sucursal------------------------ -->
+<div class="pagina-bienvenida">
+        <section class="card-bienvenida">
+
+    <p class="texto-destacado">Salones</p>
+    <h1>Encontrá tu sucursal más cercana</h1>
+    <p class="texto-suave">
+        Ingresá tu barrio y te recomendaremos la sucursal más cercana
+    </p>
+
+    <form id="formulario-nombre">
+
+        <label for="barrio">Barrio</label>
+
+        <input
+            type="text"
+            id="barrio"
+            name="barrio"
+            placeholder="Ej: Boedo"
+            required
+        >
+
+        <button type="submit">
+            Buscar sucursal
+        </button>
+
+    </form>
+
+    <p id="resultado-sucursal"></p>
+
+</section>
+</div>
+
+<!-- ---------------------------- Tarjetas salones sucursales------------------------ -->
+
+        <section id="salones">
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-belgranoR.jpg" alt="imagen salon">
+                <h2>Belgrano R</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Cabildo 4873, Belgrano</li>
+                    <li><strong>WhatsApp:</strong> 11 4949-8765</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-boedo.jpg" alt="">
+                <h2>Boedo</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Boedo 813, Boedo</li>
+                    <li><strong>WhatsApp:</strong> 11 4949-9286</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-caballitoavif.avif" alt="">
+                <h2>Caballito</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Thomas 654, Caballito</li>
+                    <li><strong>WhatsApp:</strong> 11 4949-1234</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-puertomadero.avif" alt="">
+                <h2>Puerto Madero</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Juana Rodriguez 564, Puerto Madero</li>
+                    <li><strong>WhatsApp:</strong> 11 4949-8764</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-recoleta.jpg" alt="">
+                <h2>Recoleta</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Alvear 2345, Recoleta</li>
+                    <li><strong>WhatsApp:</strong> 11 7654-9286</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-palermo.jpg" alt="">
+                <h2>Palermo</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Santa Fe 4876, Palermo</li>
+                    <li><strong>WhatsApp:</strong> 11 4949-8647</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-olivos.jpeg" alt="">
+                <h2>Olivos</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Maipú 6543</li>
+                    <li><strong>WhatsApp:</strong> 11 4949-1234</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-unicenter.jpeg" alt="">
+                <h2>Unicenter</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Paraná 3745, Munro</li>
+                    <li><strong>WhatsApp:</strong> 11 4949-8765</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-abasto.jpeg" alt="">
+                <h2>Abasto shopping</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Corrientes 2345, Balvanera</li>
+                    <li><strong>WhatsApp:</strong> 11 8765-9286</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-cañuelas.jpeg" alt="">                
+                <h2>Cañuelas</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Manuel Belgrano 6543, Cañuelas</li>
+                    <li><strong>WhatsApp:</strong> 11 8765-9289</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <img src="./assets/img/img-salones/salon-altopalermo.jpg" alt="">
+                <h2>Alto Palermo</h2>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Santa Fe 3253, Palermo</li>
+                    <li><strong>WhatsApp:</strong> 11 4949-8754</li>
+                    <li><strong>Horario:</strong> Lunes a Domingo 09:00 - 21:00</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <script type="module" src="./js/pages/servicios.js"></script>

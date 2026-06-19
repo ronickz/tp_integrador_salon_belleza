@@ -124,15 +124,15 @@ body {
 }
 
 .pagina-bienvenida {
-  min-height: calc(100vh - 88px);
+  /* min-height: calc(100vh - 88px); */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  padding: 20px;
 }
 
 .card-bienvenida {
-  width: min(100%, 420px);
+  width: min(100%, 700px);
   padding: 32px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
@@ -158,13 +158,13 @@ body {
 
 .texto-suave {
   margin: 12px 0 24px;
-  /* color: var(--color-text-soft); */
   color: black;
   line-height: 1.5;
 }
 
 #formulario-nombre {
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
   gap: 12px;
 }
@@ -248,4 +248,192 @@ body {
     min-height: calc(100vh - 150px);
     padding: 16px;
   }
+}
+-------------------/* Servicios */---------------------
+
+#servicios {
+    width: min(90%, 1100px);
+
+    margin: 0 auto;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+#titulos-secciones {
+    width: fit-content;
+    margin: 2rem auto;
+
+    padding: 10px 40px;
+
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+
+    color: var(--color-primary);
+    font-size: 2.8rem;
+}
+#texto-titulo {
+  color: var(--color-text-soft);
+  text-align: center;
+}
+
+
+#opciones-servicios {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.1rem;
+    margin: 3rem;
+
+}
+
+
+#servicios h2 {
+    color: var(--color-gold-soft);
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 5px;
+    border-bottom: 2px solid var(--color-gold);
+}
+
+#categorias {
+    color: var(--color-gold-soft);
+    background-color: var(--color-primary);
+    font-size: 1.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0.6rem 0.8rem;
+    font-weight: 600;
+}
+#categorias:hover {
+    background-color: var(--color-primary-dark);
+}
+
+#desplegables{
+  margin-bottom: 1.0rem;
+}
+#desplegables li {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    padding: 0.3rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ------------------------- salones ---------------------------------------- */
+
+#salones{
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 500px));
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+
+.cards {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: var(--shadow-soft);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cards:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.cards img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.cards:hover img {
+    transform: scale(1.05);
+}
+
+.cards h2 {
+    color: var(--color-gold-soft);
+    text-align: center;
+
+    margin: 1rem;
+    padding-bottom: .5rem;
+
+    border-bottom: 2px solid var(--color-gold);
+}
+
+.cards ul {
+    list-style: none;
+    padding: 0 1.5rem 1.5rem;
+    margin: 0;
+}
+
+.cards li {
+    padding: .8rem 0;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.cards li:last-child {
+    border-bottom: none;
+}
+
+/* -------------------------Tienda--------------------------- */
+
+#productos {
+    width: min(90%, 1400px);
+    margin: 0 auto;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.producto-card img {
+    height: 180px;
+}
+
+.producto-card h2 {
+    font-size: 1.1rem;
+}
+
+.producto-card ul {
+    padding: 0 1rem 1rem;
+}
+#tienda {
+    width: min(90%, 1400px);
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.marca {
+    margin-bottom: 3rem;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
+    gap: 1.5rem;
+    justify-content: center;
 }
