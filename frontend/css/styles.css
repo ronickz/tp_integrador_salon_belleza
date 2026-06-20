@@ -39,6 +39,7 @@ body {
     url("../assets/img/background.png");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   color: var(--color-text);
 }
 
@@ -124,14 +125,14 @@ body {
 }
 
 .pagina-bienvenida {
-  /* min-height: calc(100vh - 88px); */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 50px;
 }
 
-.card-bienvenida {
+.formularios {
   width: min(100%, 700px);
   padding: 32px;
   border: 1px solid var(--color-border);
@@ -140,6 +141,12 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
+.formularios h1 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 2rem;
+  line-height: 1.1;
+}
 .texto-destacado {
   margin: 0 0 10px;
   color: var(--color-text-soft);
@@ -149,15 +156,10 @@ body {
   text-transform: uppercase;
 }
 
-.card-bienvenida h1 {
-  margin: 0;
-  color: var(--color-text);
-  font-size: 2rem;
-  line-height: 1.1;
-}
 
-.texto-suave {
+.texto-descripciones {
   margin: 12px 0 24px;
+  font-size: 1.1rem;
   color: black;
   line-height: 1.5;
 }
@@ -281,7 +283,7 @@ body {
 }
 
 
-#opciones-servicios {
+#contenedor-servicios-historia{
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: 12px;
@@ -337,8 +339,6 @@ body {
     justify-content: center;
     gap: 2rem;
 }
-
-
 
 .cards {
     background-color: var(--color-surface);
@@ -411,11 +411,16 @@ body {
 }
 
 .producto-card img {
-    height: 180px;
-}
+    width: 100%;
+    height: 280px;
+    object-fit: cover;}
 
 .producto-card h2 {
     font-size: 1.1rem;
+}
+
+.producto-card {
+    text-align: center;
 }
 
 .producto-card ul {
@@ -436,4 +441,56 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
     gap: 1.5rem;
     justify-content: center;
+}
+
+#titulos-h3 {
+  color: var(--color-primary);
+    width: fit-content;
+    font-size: 2.0rem;
+    text-decoration: underline;
+}
+
+.btn-carrito {
+    background-color: var(--color-gold);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+/* Home */
+.historia-contenido{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.historia-contenido img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.historia-texto{
+    flex: 1;
+}
+
+.quienes-contenido{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.quienes-contenido img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.quienes-contenido .historia-texto{
+    flex: 1;
 }

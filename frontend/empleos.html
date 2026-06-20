@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+
+
+
+    <title>Empleos</title>
+<body>
+    <header class="navbar-principal">
+        <div class="marca-navbar">
+            <span class="logo-navbar" aria-hidden="true">CE</span>
+            <div class="info-navbar">
+                <p class="nombre-app">Estudio CE</p>
+                <p class="alumnos-navbar">Carola Castanhera y Ezequiel Perez</p>
+            </div>
+        </div>
+
+        <nav class="navegacion-navbar" aria-label="Navegacion principal">
+            <a href="./index.html">Home</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="salones.html">Salones</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="empleos.html">Empleos</a>
+            
+        </nav>
+    </header>
+
+    <main>
+<!--------------------------------------- Seccion vacantes nuevas -------------------------------------->
+<div class="pagina-bienvenida">
+    <section class="formularios">
+        <h2 id="titulos-secciones">Trabajá con nosotros</h2>
+
+        <p class="texto-suave">
+            ¿Te apasiona el mundo de la belleza y el cuidado capilar?
+            Sumate a nuestro equipo y desarrollá tu carrera profesional
+            junto a nosotros.
+        </p>
+
+        <form id="formulario-nombre">
+            <label for="nombre-empleo">Nombre y apellido</label>
+            <input type="text" id="nombre-empleo" required>
+
+            <label for="email-empleo">Correo electrónico</label>
+            <input type="email" id="email-empleo" required>
+
+            <label for="telefono-empleo">Teléfono</label>
+            <input type="tel" id="telefono-empleo" required>
+
+            <label for="sucursal">Sucursal de interés</label>
+            <select id="sucursal">
+                <option>Palermo</option>
+                <option>Recoleta</option>
+                <option>Belgrano R</option>
+                <option>Boedo</option>
+                <option>Alto Palermo</option>
+                <option>Puerto Madero</option>
+                <option>Cañuelas</option>
+                <option>Caballito</option>
+                <option>Olivos</option>
+                <option>Unicenter</option>
+                <option>Abasto shopping</option>
+                <option>San Isidro</option>
+            </select>
+
+            <button class="btn-carrito" type="submit">Enviar postulación</button>
+        </form>
+    </section>
+</div>
+    </main>
+
+    <script type="module" src="./js/pages/servicios.js"></script>
+</body>
+</html>
