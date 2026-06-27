@@ -1,33 +1,42 @@
-import express from "express"
-import environments from "./config/environments.js"
-import connection from "./database/db.js";
-import cors from "cors"
+import express from "express";
+import environments from "./src/config/environments.js";
+
+import connection from "./src/database/db.js";
+import { setupDatabase } from "./src/database/setup.js";
+
+
+import cors from "cors";
+import { loggerURL } from "./src/middlewares/index.js";
+
+
+import { productRoutes } from "./src/routes/index.js";
 
 const app = express();
 
-app.use(cors())
+
+// middlwares
+
+app.use(loggerURL);
+app.use(cors());
+app.use(express.json());
+
+
+
+// routes
 
 app.get('/',(req,res)=>{
     res.send('Hola desde la api');
-})
+});
+
+app.use("/api", productRoutes);
 
 
-app.get('/api/productos',async(req,res)=>{
-    try {
-        const sql = "SELECT * FROM productos";
-        const [rows] = await connection.query(sql);
-
-        res.status(200).json({
-            payload:rows
-        })
-    } catch (error) {
-        res.status(500).json({
-            error
-        })
-    }
-})
-
-
-app.listen(environments.port,()=>{
-    console.log(`Corriendo servidor en puerto ${environments.port}`);
-})
+setupDatabase(connection)
+    .then(() => {
+        app.listen(environments.port,()=>{
+            console.log(`Corriendo servidor en puerto ${environments.port}`);
+        });
+    })
+    .catch((error) => {
+        console.log("Error preparando la database:", error.message);
+    });
