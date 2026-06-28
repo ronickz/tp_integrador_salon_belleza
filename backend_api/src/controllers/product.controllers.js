@@ -88,7 +88,7 @@ const createProduct = async (req, res) => {
       price,
     );
 
-    res.status(201).json({
+    res.status(200).json({
       message: `Producto creado con exito con id ${rows.insertId}`,
       productId: rows.insertId,
     });

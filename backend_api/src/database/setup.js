@@ -1,32 +1,58 @@
 const useDatabase = async (connection) => {
-    const sql = "USE salon_belleza";
+  const sql = "USE salon_belleza";
 
-    await connection.query(sql);
+  await connection.query(sql);
 };
 
-const createProductsTableIfNotExists = async (connection) => {
-    const sql = `
-        CREATE TABLE IF NOT EXISTS products (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            name VARCHAR(50) NOT NULL,
-            category ENUM('cuidado_capilar', 'manicuria_unas') NOT NULL,
-            image VARCHAR(255) NOT NULL,
-            price DECIMAL(10, 2) NOT NULL,
-            active BOOLEAN NOT NULL DEFAULT TRUE
-        )
-    `;
+const createTablesIfNotExists = async (connection) => {
+  const productsTable = `
+    CREATE TABLE IF NOT EXISTS products (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(50) NOT NULL,
+      category ENUM('cuidado_capilar', 'manicuria_unas') NOT NULL,
+      image VARCHAR(255) NOT NULL,
+      price DECIMAL(10, 2) NOT NULL,
+      active BOOLEAN NOT NULL DEFAULT TRUE
+    )
+  `;
 
-    await connection.query(sql);
+  const salesTable = `
+    CREATE TABLE IF NOT EXISTS sales (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      client_name VARCHAR(100) NOT NULL,
+      sale_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      total DECIMAL(10, 2) NOT NULL
+    )
+  `;
+
+  const saleProductsTable = `
+    CREATE TABLE IF NOT EXISTS sale_products (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      sale_id INT NOT NULL,
+      product_id INT NOT NULL,
+      quantity INT NOT NULL,
+      unit_price DECIMAL(10, 2) NOT NULL,
+      subtotal DECIMAL(10, 2) NOT NULL,
+      FOREIGN KEY (sale_id) REFERENCES sales(id),
+      FOREIGN KEY (product_id) REFERENCES products(id)
+    )
+  `;
+
+  await connection.query(productsTable);
+  await connection.query(salesTable);
+  await connection.query(saleProductsTable);
 };
 
 const importProductsIfEmpty = async (connection) => {
-    const [[{ total }]] = await connection.query("SELECT COUNT(*) AS total FROM products");
+  const [[{ total }]] = await connection.query(
+    "SELECT COUNT(*) AS total FROM products",
+  );
 
-    if (total > 0) {
-        return;
-    }
+  if (total > 0) {
+    return;
+  }
 
-    const sql = `
+  const sql = `
         INSERT INTO products 
         (name, category, image, price, active)
         VALUES
@@ -52,17 +78,15 @@ const importProductsIfEmpty = async (connection) => {
         ('Gel Constructor Transparente', 'manicuria_unas', 'https://placehold.co/600x400.png', 11800.00, 0)
     `;
 
-    await connection.query(sql);
+  await connection.query(sql);
 };
 
 const setupDatabase = async (connection) => {
-    await useDatabase(connection);
-    await createProductsTableIfNotExists(connection);
-    await importProductsIfEmpty(connection);
+  await useDatabase(connection);
+  await createTablesIfNotExists(connection);
+  await importProductsIfEmpty(connection);
 
-    console.log("Database creada y datos importados correctamente");
+  console.log("Database creada y datos importados correctamente");
 };
 
-export {
-    setupDatabase
-};
+export { setupDatabase };

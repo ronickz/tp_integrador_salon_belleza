@@ -40,7 +40,7 @@ const validateProduct = (req, res, next) => {
 
   if (isEmpty(price)) {
     errores.push("El precio es obligatorio");
-  } else if (!Number.isFinite(priceNumber) || priceNumber <= 0) {
+  } else if (priceNumber <= 0) {
     errores.push("El precio debe ser un numero mayor a 0");
   }
 

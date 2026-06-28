@@ -9,7 +9,7 @@ import cors from "cors";
 import { loggerURL } from "./src/middlewares/index.js";
 
 
-import { productRoutes } from "./src/routes/index.js";
+import { productRoutes, salesRoutes } from "./src/routes/index.js";
 
 const app = express();
 
@@ -29,6 +29,7 @@ app.get('/',(req,res)=>{
 });
 
 app.use("/api", productRoutes);
+app.use("/api", salesRoutes);
 
 
 setupDatabase(connection)
