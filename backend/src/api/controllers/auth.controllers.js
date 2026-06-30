@@ -1,0 +1,3 @@
+const loginView = (req,res) => {
+       
+}
