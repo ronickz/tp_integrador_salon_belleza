@@ -1,0 +1,25 @@
+<%- include("partials/head.ejs") %>
+<%- include("partials/nav.ejs") %>
+
+    <main>
+
+        <section class="secccion-productos">
+            <h2> <%=  about %></h2>
+            <div id="contenedor-productos">
+                
+                <!-- Recibimos el array de productos directamente en la plantilla para iterarlo -->
+                <% productsArray.forEach(producto => { %>
+                    <% console.log(producto) %>
+                    <div class="card-producto">
+                        <img src="<%= producto.image %>" alt="<%= producto.name %>">
+                        <h4><%= producto.name %></h4>
+                        <p>Id: <%= producto.id %></p>
+                        <p>$<%= producto.price %></p>
+                        <p><%= producto.category %></p>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+
+<%- include("partials/footer.ejs") %>

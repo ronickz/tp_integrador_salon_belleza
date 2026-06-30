@@ -10,6 +10,17 @@
 9. Crear endpoint /dashboard que apunte al router view.routes.js /index, indexView (controller)
 
 
+### Funcionamiento EJS
+
+1. El navegador solicita una pagina: `/`
+2. Express recibe la peticion y ejecuta controlador
+3. `res.render()` pasa los datos a la vista, index.ejs por ej.
+4. `index.ejs` procesa **del lado del servidor**.
+5. Todo lo que este `<%  %>` es JS del lado del servidor
+6. Todo lo que este `<%= %` se imprime dentro del HTML
+
+
+
 ## LOGIN
 
 1. Instalar express-session e importarlo

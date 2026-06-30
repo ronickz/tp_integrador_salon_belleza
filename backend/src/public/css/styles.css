@@ -1,0 +1,33 @@
+:root {
+  /* Base */
+  --color-bg: #fff8f6;
+  --color-surface: #ffffff;
+  --color-surface-soft: #fff1f2;
+
+  /* Marca */
+  --color-primary: #d85c7a;
+  --color-primary-dark: #9b214d;
+  --color-primary-light: #f4a8b8;
+
+  /* Secundarios */
+  --color-gold: #d79a83;
+  --color-gold-soft: #f4d7ca;
+  --color-blush: #fbe1e8;
+
+  /* Texto */
+  --color-text: #2b2024;
+  --color-text-soft: #6f5b61;
+  --color-muted: #9b8a8e;
+
+  /* Bordes y sombras */
+  --color-border: #ead6da;
+  --shadow-soft: 0 14px 40px rgba(155, 33, 77, 0.12);
+
+  /* Estados */
+  --color-success: #7aa874;
+  --color-danger: #d94c4c;
+}
+
+body {
+    background-color: var(--color-danger);
+}
